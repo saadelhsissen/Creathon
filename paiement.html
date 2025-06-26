@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paiement sécurisé</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .carte-container {
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin-top: 40px;
+    }
+
+    .carte-container h2 {
+      text-align: center;
+      color: #A6B6FF;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .paiement-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      background-color: #FF94A4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .paiement-btn:hover {
+      background-color: #e27b90;
+    }
+
+    .credit-card-image {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 90%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-logos left-logos">
+            <img src="logo1.png" alt="Logo 1">
+            <img src="logo2.png" alt="Logo 2">
+        </div>
+
+        <div class="header-title">
+            <h1>Commander la Up & Light Box</h1>
+        </div>
+
+        <div class="header-logos right-logos">
+            <img src="logo3.svg" alt="Logo 3">
+            <img src="logo4.png" alt="Logo 4">
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="commande.html">Commander</a>
+        <a href="controle.html">Contrôle</a>
+    </nav>
+
+  <div class="carte-container">
+    <h2>Paiement sécurisé</h2>
+
+    <img src="carte.png" alt="Carte bancaire" class="credit-card-image">
+
+    <form action="confirmation.html" method="post">
+      <div class="form-group">
+        <label for="nom">Nom sur la carte :</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="numero">Numéro de carte :</label>
+        <input type="text" id="numero" name="numero" maxlength="19" required>
+      </div>
+
+      <div class="form-group">
+        <label for="expiration">Date d’expiration :</label>
+        <input type="text" id="expiration" name="expiration" placeholder="MM/AA" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cvv">CVV :</label>
+        <input type="text" id="cvv" name="cvv" maxlength="4" required>
+      </div>
+
+      <button type="submit" class="paiement-btn">Payer</button>
+    </form>
+  </div>
+
+</body>
+</html>

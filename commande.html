@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commander - Up & Light Box</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-logos left-logos">
+            <img src="logo1.png" alt="Logo 1">
+            <img src="logo2.png" alt="Logo 2">
+        </div>
+
+        <div class="header-title">
+            <h1>Commander la Up & Light Box</h1>
+            <p>Personnalisez votre commande selon vos besoins</p>
+        </div>
+
+        <div class="header-logos right-logos">
+            <img src="logo3.svg" alt="Logo 3">
+            <img src="logo4.png" alt="Logo 4">
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="commande.html">Commander</a>
+        <a href="controle.html">Contrôle</a>
+    </nav>
+
+
+    <section>
+        <form action="paiement.html" method="get">
+            <h2>Notre MAGNIFIQUE Invention</h2>
+            <div class="ligne-objets">
+                <div class="objet">
+                    <img src="objet1.jpg" alt="Objet 1">
+                </div>
+                <div class="objet">
+                    <img src="objet2.png" alt="Objet 2">
+                </div>
+            </div>
+
+
+
+            <!-- Choix de fixation -->
+            <h2>Choisissez votre type de fixation</h2>
+            <div class="fixation-container">
+                <!-- Fixation au sol -->
+                <label class="fixation-option">
+                    <img src="image1.png" alt="Fixation au sol">
+                    <input type="radio" name="fixation" value="sol" required>
+                    <span>Accrochage au sol</span>
+                </label>
+
+                <!-- Fixation au mur -->
+                <label class="fixation-option">
+                    <img src="image2.png" alt="Fixation au mur">
+                    <input type="radio" name="fixation" value="mur">
+                    <span>Accrochage au mur</span>
+                </label>
+            </div>
+
+            <!-- Options supplémentaires -->
+            <h2>Options supplémentaires</h2>
+            <div class="option-barre-verticale">
+                <img src="accroche.png" alt="Accroches pour barre" class="img-barre">
+                <label>
+                    <input type="checkbox" name="barre" value="oui" id="barreCheckbox" onchange="toggleQuantiteBarre()">
+                    Ajouter des accroches pour barre
+                </label>
+                <div id="quantiteBarre" style="display: none; margin-top: 10px;">
+                    <label for="nbBarres">Quantité souhaitée :</label>
+                    <input type="number" id="nbBarres" name="nbBarres" min="1" max="20" value="1" style="width: 60px;">
+                </div>
+            </div>
+
+
+            <!-- Installation -->
+            <h2>Installation</h2>
+            <label>
+                <input type="radio" name="installation" value="auto" required>
+                Je l’installe moi-même
+            </label><br>
+            <label>
+                <input type="radio" name="installation" value="pro">
+                Je préfère une installation par un professionnel
+            </label>
+
+            <br><br>
+            <button type="submit">Valider la commande</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Up & Light. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function toggleQuantiteBarre() {
+            const checkbox = document.getElementById("barreCheckbox");
+            const champQuantite = document.getElementById("quantiteBarre");
+            champQuantite.style.display = checkbox.checked ? "block" : "none";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aide & Contact - Up & Light</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-logos left-logos">
+            <img src="logo1.png" alt="Logo 1">
+            <img src="logo2.png" alt="Logo 2">
+        </div>
+
+        <div class="header-title">
+            <h1>Commander la Up & Light Box</h1>
+            <p>Personnalisez votre commande selon vos besoins</p>
+        </div>
+
+        <div class="header-logos right-logos">
+            <img src="logo3.svg" alt="Logo 3">
+            <img src="logo4.png" alt="Logo 4">
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="commande.html">Commander</a>
+        <a href="controle.html">Contrôle</a>
+    </nav>
+
+  <section>
+    <button onclick="toggleAide()">📖 Aide & Contact</button>
+
+    <div id="aideContact" style="display: none; margin-top: 20px;">
+      <div class="bloc-titre">Procédure d’installation étape par étape :</div>
+      <ul>
+        <li>Activer Bluetooth sur le téléphone</li>
+        <li>Allumer la machine</li>
+        <li>Appuyer sur le bouton Bluetooth de la machine</li>
+        <li>Saisir le code inscrit sur la boîte</li>
+        <li>Attendre la confirmation</li>
+        <li>Utiliser l’application</li>
+      </ul>
+
+      <div class="bloc-titre">Notice d’utilisation</div>
+      <ul>
+        <li>Aller à l’onglet du milieu</li>
+        <li>Pour monter, cliquer sur la flèche verte vers le haut</li>
+        <li>Pour descendre, cliquer sur la flèche vers le bas</li>
+      </ul>
+
+      <div class="bloc-titre">En cas de problème</div>
+      <p>
+        En cas de problème de connexion ou de fonctionnement, veuillez contacter l’assistance via l’onglet aide.<br>
+        📞 Numéro à contacter : <strong>0600000000</strong><br>
+        📧 Mail de contact : <strong>antoine.veyer@uphf.fr</strong>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Up & Light. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function toggleAide() {
+      const bloc = document.getElementById("aideContact");
+      bloc.style.display = bloc.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
